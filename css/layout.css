@@ -193,7 +193,7 @@
 .container-contact .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     font-style: normal;
     color: var(--brand-orange);
     width: 40%;
@@ -219,6 +219,12 @@
 .container-contact .contact-form h3 {
     color: var(--brand-orange);
     margin-bottom: 1rem;
+}
+
+.form-btns {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 /* Style footer */
