@@ -27,11 +27,9 @@
                     <img src="assets/img/logo.png" alt="Logo OxeTech" title="logo oxetech">
                 </a>
             </div>
-            <div class="navbar-menu">
-                <button aria-label="abrir menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+            <button onclick="openSidebarBtn()" class="navbar-menu" aria-label="abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -49,8 +47,11 @@
     </header>
 
     <aside class="sidebar">
+        <button onclick="closeSidebarBtn()" class="navbar-menu" aria-label="Fechar menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <nav>
-            <ul>
+            <ul class="sidebar-links">
                 <li><a href="#">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#programs">Programas</a></li>
@@ -205,6 +206,6 @@
     <footer class="foooter">
         <p>&copy; 2026 OxeTech Alagoas — Todos os direitos reservados.</p>
     </footer>
+    <script src="js/main.js" defer></script>
 </body>
-
 </html>
