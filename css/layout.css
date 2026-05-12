@@ -109,8 +109,11 @@
 }
 
 .about-container .about-paragraphs p {
-    color: var(--brand-orange);
     font-size: 0.875rem;
+}
+
+.color-orange {
+    color: var(--brand-orange);
 }
 
 .about-container .about-img {
