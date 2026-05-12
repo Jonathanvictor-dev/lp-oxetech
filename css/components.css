@@ -46,20 +46,23 @@
 }
 
 /* Forms */
-.input-field {
+.input-field, 
+.textarea-field {
+    color: var(--brand-orange);
     padding: 0.5rem;
-    border: 1px solid var(--brand-gray);
+    border: 1px solid var(--brand-orange);
     border-radius: 0.25rem;
     font-size: 0.875rem;
     transition: border-color 0.3s ease;
+    outline-color: var(--brand-orange);
+}
+
+.input-field::placeholder,
+.textarea-field::placeholder {
+    color: var(--brand-orange);
 }
 
 .textarea-field {
-    padding: 0.5rem;
-    border: 1px solid var(--brand-gray);
-    border-radius: 0.25rem;
-    font-size: 0.875rem;
-    transition: border-color 0.3s ease;
     resize: vertical;
     min-height: 100px;
 }
@@ -74,6 +77,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
     background-color: transparent;
+    border: 2px solid var(--brand-orange);
 }
 
 .card-contact i {
