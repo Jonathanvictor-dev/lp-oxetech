@@ -1,0 +1,47 @@
+:root {
+    --brand-orange: #df622e;
+    --brand-orange-accent: #f5a623;
+    --brand-white: #ffffff;
+    --brand-gray: #9399a5;
+    --brand-gray-light: #e0e0e0;
+
+    --brand-orange-deep: #a85500;
+    --background-base: #f5f5f5;
+    --background-royal-blue: #255aa7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Roboto", sans-serif;
+}
+
+body {
+    padding-top: 6rem;
+    background-color: var(--background-base);
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--brand-orange);
+  border-radius: 0.25rem;
+  border: 2px solid var(--background-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-orange-deep);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 0.875rem;
+    }
+}

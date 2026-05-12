@@ -1,0 +1,105 @@
+/* Buttons */
+.btn-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--brand-orange);
+    color: var(--brand-white);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: max-content;
+}
+
+.btn-link:hover {
+    background-color: var(--brand-orange-deep);
+}
+
+.btn-submit {
+    padding: 0.5rem 1rem;
+    background-color: var(--brand-orange);
+    color: var(--brand-white);
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--brand-orange-deep);
+}
+
+.btn-reset {
+    padding: 0.5rem 1rem;
+    background-color: var(--brand-gray);
+    color: var(--brand-white);
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover {
+    background-color: var(--brand-gray-light);
+}
+
+/* Forms */
+.input-field {
+    padding: 0.5rem;
+    border: 1px solid var(--brand-gray);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+}
+
+.textarea-field {
+    padding: 0.5rem;
+    border: 1px solid var(--brand-gray);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Style cards */
+.card-contact {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    background-color: transparent;
+}
+
+.card-contact i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-white);
+    background-color: var(--brand-orange);
+    width: 2rem;
+    height: 2rem;
+    border: 0.25rem solid var(--brand-orange);
+    border-radius: 0.25rem;
+}
+
+.card-contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-contact-text a {
+    text-decoration: none;
+    color: var(--brand-orange);
+    transition: color 0.3s ease;
+}
+
+.card-contact-text a:hover {
+    color: var(--brand-orange-deep);
+}
