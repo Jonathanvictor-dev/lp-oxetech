@@ -1,77 +1,51 @@
 const navbarMenu = document.querySelectorAll('.nav-links li a');
 const sidebarMenu = document.querySelectorAll('.sidebar-links li a');
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll('section');
+const backToTop = document.querySelector('.back-to-top');
 
-// Functions 
+// Sidebar
 const openSidebarBtn = () => {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.add('openSidebar');
+    document.querySelector('.sidebar').classList.add('openSidebar');
 };
 
 const closeSidebarBtn = () => {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.remove('openSidebar');
+    document.querySelector('.sidebar').classList.remove('openSidebar');
 };
 
-// Events
-window.addEventListener('scroll', () => {
-    let currentNavbar = "";
+// Active Links
+const updateActiveLinks = (menuLinks) => {
+    let currentSection = '';
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
 
         if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-            currentNavbar = section.getAttribute('id');
+            currentSection = section.getAttribute('id');
         };
     });
 
-    navbarMenu.forEach(link => {
+    menuLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentNavbar}`) {
+
+        if (
+            link.getAttribute('href') === `#${currentSection}`
+        ) {
             link.classList.add('active');
         };
     });
+};
+
+// Scroll Event
+window.addEventListener('scroll', () => {
+    updateActiveLinks(navbarMenu);
+    updateActiveLinks(sidebarMenu);
 });
 
 window.addEventListener('scroll', () => {
-    let currentSidebar = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-            currentSidebar = section.getAttribute('id');
-        };
-    });
-
-    sidebarMenu.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSidebar}`) {
-            link.classList.add('active');
-        };
-    });
-});
-
-navbarMenu.forEach(link => {
-    link.addEventListener('click', () => {
-        link.classList.add('active');
-        navbarMenu.forEach(otherLink => {
-            if (otherLink !== link) {
-                otherLink.classList.remove('active');
-            };
-        });
-    });
-});
-
-sidebarMenu.forEach(link => {
-    link.addEventListener('click', () => {
-        link.classList.add('active');
-        sidebarMenu.forEach(otherLink => {
-            if (otherLink !== link) {
-                otherLink.classList.remove('active');
-            };
-        });
-    });
+  if (window.pageYOffset > 300) {
+    backToTop.classList.add('show');
+  } else {
+    backToTop.classList.remove('show');
+  };
 });
