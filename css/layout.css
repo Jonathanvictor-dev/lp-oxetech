@@ -142,7 +142,9 @@
 
 /* Style main */
 .main section {
-    padding: 4rem 16rem;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 16rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
 }
@@ -167,7 +169,7 @@
     flex-direction: column;
     justify-content: start;
     gap: 1rem;
-    width: 40%;
+    width: 30%;
 }
 
 .about-container .about-paragraphs p {
@@ -181,7 +183,7 @@
 .about-container .about-img {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 70%;
 }
 
 .about-container .about-img img {
