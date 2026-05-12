@@ -17,6 +17,10 @@
     font-family: "Inter", "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     padding-top: 6rem;
     background-color: var(--background-base);
